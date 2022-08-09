@@ -9,7 +9,7 @@ async function savePDF() {
     waitUntil: "networkidle0",
   });
 
-  const pdf = await page.pdf({ format: "A4" });
+  const pdf = await page.pdf({ format: "A4", printBackground: true });
   await browser.close();
   return pdf;
 }
